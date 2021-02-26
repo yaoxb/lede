@@ -66,7 +66,8 @@ jobs:
           git clone https://github.com/yaoxb/luci-app-adguardhome.git        
           git clone https://github.com/yaoxb/OpenClash.git
           git clone https://github.com/xiaorouji/openwrt-passwall.git
-          git clone https://github.com/yaoxb/openwrt-ssr-plus.git 
+          git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
+          git clone https://github.com/jerrykuku/luci-app-vssr.git 
 
         
       - name: Update feeds
@@ -155,11 +156,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-transmission=y
           CONFIG_PACKAGE_luci-app-cifs-mount=y
           CONFIG_PACKAGE_luci-app-zerotier=y
-          CONFIG_PACKAGE_luci-app-ssr-plus=y
-          CONFIG_PACKAGE_tcping=y
-          CONFIG_PACKAGE_xray-core=y
-          CONFIG_PACKAGE_naiveproxy=y
-
+          CONFIG_PACKAGE_luci-app-vssr=y
+          CONFIG_PACKAGE_lua-maxminddb=y                    
           EOF
 
           # LuCI主题:
